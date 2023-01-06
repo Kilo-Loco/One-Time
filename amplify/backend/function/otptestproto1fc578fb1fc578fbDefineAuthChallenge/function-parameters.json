@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "boilerplate-define-challenge"
+  ],
+  "parentResource": "otptestproto1fc578fb1fc578fb",
+  "functionName": "otptestproto1fc578fb1fc578fbDefineAuthChallenge",
+  "resourceName": "otptestproto1fc578fb1fc578fbDefineAuthChallenge",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/DefineAuthChallenge",
+  "triggerTemplate": "DefineAuthChallenge.json.ejs",
+  "triggerEventPath": "DefineAuthChallenge.event.json",
+  "roleName": "otptestproto1fc578fb1fc578fbDefineAuthChallenge",
+  "skipEdit": true,
+  "enableCors": false
+}
