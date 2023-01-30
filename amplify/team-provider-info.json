@@ -23,7 +23,7 @@
         },
         "otptestproto1fc578fb1fc578fbDefineAuthChallenge": {
           "deploymentBucketName": "amplify-otptestproto-staging-200457-deployment",
-          "s3Key": "amplify-builds/otptestproto1fc578fb1fc578fbDefineAuthChallenge-5631652f7677574e4657-build.zip"
+          "s3Key": "amplify-builds/otptestproto1fc578fb1fc578fbDefineAuthChallenge-446f69716a7a3864734e-build.zip"
         },
         "otptestproto1fc578fb1fc578fbVerifyAuthChallengeResponse": {
           "deploymentBucketName": "amplify-otptestproto-staging-200457-deployment",

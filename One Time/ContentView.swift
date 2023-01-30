@@ -10,8 +10,8 @@ import Amplify
 import SwiftUI
 
 struct ContentView: View {
-    let username = "kiloloco"
-    let email = "rekylelee@gmail.com"
+    let username = "kylelee"
+    let email = "kyle@kiloloco.com"
     
     @State var status = ""
     @State var confirmSignUpCode = ""
@@ -25,6 +25,8 @@ struct ContentView: View {
             Button("SIGN IN", action: signIn)
             TextField("CHALLENGE CODE", text: $challengeCode)
             Button("CONFIRM SIGN IN", action: confirmSignIn)
+            Button("CHECK IS SIGNED IN", action: isSignedIn)
+            Button("SIGN OUT", action: signOut)
         }
         .padding()
     }
@@ -72,6 +74,7 @@ struct ContentView: View {
         Task {
             do {
                 let options = AWSAuthSignInOptions(authFlowType: .customWithoutSRP)
+                
                 let result = try await Amplify.Auth.signIn(
                     username: username,
                     options: .init(pluginOptions: options)
@@ -96,6 +99,22 @@ struct ContentView: View {
             } catch {
                 print(error)
             }
+        }
+    }
+    
+    func isSignedIn() {
+        Task {
+            do {
+                let session = try await Amplify.Auth.fetchAuthSession()
+                print(session.isSignedIn)
+            }
+        }
+    }
+    
+    func signOut() {
+        Task {
+            _ = await Amplify.Auth.signOut()
+            print("Signed out")
         }
     }
 }
